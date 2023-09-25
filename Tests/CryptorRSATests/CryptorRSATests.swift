@@ -24,7 +24,7 @@ import XCTest
     import OpenSSL
 #endif
 
-@testable import CryptorRSA
+@testable import CryptorRSAKit
 
 @available(macOS 10.12, iOS 10.3, watchOS 3.3, tvOS 12.0, *)
 class CryptorRSATests: XCTestCase {

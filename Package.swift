@@ -34,7 +34,7 @@ var targetDependencies: [Target.Dependency] = []
 #endif
 
 let package = Package(
-	name: "CryptorRSA",
+	name: "CryptorRSAKit",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -48,11 +48,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "CryptorRSAKit",
-            dependencies: targetDependencies
+            dependencies: targetDependencies,
+            path: "./Sources/CryptorRSA"
         ),
         .testTarget(
             name: "CryptorRSATests",
-            dependencies: ["CryptorRSA"]
+            dependencies: ["CryptorRSAKit"]
         )
     ]
 )
